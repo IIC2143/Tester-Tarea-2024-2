@@ -97,7 +97,7 @@ def delete_worst_game(games, reviews, *, show=False): #B
         
 
 @__skip_exception
-def patch_update_game_calification(game, *, show=True):
+def patch_update_game_calification(game, *, show=False):
     url = f'{BASE_URL}/games/calification_update/{game.id}'
     game.calification = game.calculate_points()
     data = game.data()

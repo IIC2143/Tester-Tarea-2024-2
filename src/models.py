@@ -28,6 +28,17 @@ class Game:
 
         return all([attr_1, attr_2, attr_3, attr_4])
     
+    def update(self, data):
+
+        if 'name' in data['game']:
+            self.name = data['game']['name']
+        
+        if 'description' in data['game']:
+            self.description = data['game']['description']
+
+        if 'calification' in data['game']:
+            self.calification = data['game']['calification']
+    
     def calculate_points(self):
         countOfReviews = 0
         sumCalification = 0
