@@ -13,7 +13,7 @@ from data import GAMES_B, WRONG_GAMES
 
 def test_1B():
     games = deepcopy(GAMES_B[0:3])
-    bad_games = deepcopy(WRONG_GAMES[0:2])
+    bad_games = deepcopy(WRONG_GAMES[0:3])
 
     results = {
         1: delete_all_games(),

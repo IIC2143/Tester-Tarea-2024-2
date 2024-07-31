@@ -8,17 +8,19 @@ BASE_URL = 'http://localhost:3000'
 @__skip_exception
 def post_players(player,game ,*, show=False):
     url = f'{BASE_URL}/players/{game.id}'
-    player.favorite_game = game.id
+    player.favourite_game_id = game.id
     data = player.data()
     response = post(url, json=data)
     body = response.json()
+
 
     if show:
         __show(body, player)
 
     if response.status_code >= 400:
+        print(response.status_code)
         return False
-
+    
     if player.is_valid(body, is_new=True):
         player.id = body['id']
         return True
@@ -26,13 +28,14 @@ def post_players(player,game ,*, show=False):
     return False
 
 @__skip_exception
-def delete_all_players(player, *, show=False):
+def delete_all_players(*, show=False):
     url = f'{BASE_URL}/players'
     response = delete(url)
     body = response.json()
 
     if show:
         __show(body, [])
+
 
 
     return body == []
@@ -46,6 +49,7 @@ def get_player(player, *, show=False):
     if show:
         __show(body, player)
 
+    
     return player.is_valid(body)
 
 
@@ -96,7 +100,9 @@ def post_review(game, player, review, *, show=False):
 
 @__skip_exception
 def patch_review(review, new_review_data, *, show=False):
-    url = f'{BASE_URL}/matches/{review.id}'
+    review.data()
+
+    url = f'{BASE_URL}/reviews/{review.id}'
     data = new_review_data
 
     response = patch(url, json=data)

@@ -34,11 +34,11 @@ class Game:
         newCalification = 0
 
         for review in self.reviews:
-
             if review.calification:
                 countOfReviews += 1
-                newCalification += review.calification
+                sumCalification += review.calification
             
+        
         if len(self.reviews) != 0:
             newCalification = sumCalification/countOfReviews
             return newCalification
@@ -75,6 +75,8 @@ class Review:
                 'title': self.title,
                 'description': self.description,
                 'calification': self.calification,
+                'player_id': self.player_id,
+                'game_id': self.game_id,
             },
         }
 

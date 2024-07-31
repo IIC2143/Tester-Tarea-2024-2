@@ -40,19 +40,18 @@ def test_2A():
         10: get_player(players[1]),
         11: get_player(players[2]),
         12: get_all_games(games),
-        7: post_review(games[0],players[0], reviews[0]),
-        8: post_review(games[1],players[1], reviews[1]),
-        9: post_review(games[2],players[2], reviews[2]),
-        13: get_game_reviews(games[0]),
-        14: get_game_reviews(games[1]),
-        15: get_game_reviews(games[2]),
-        16: patch_review(reviews[0], {'review': {'rating': 5.0}}),
-        17: get_game(games[0]),
-        18: get_game(games[1]),
-        19: get_game(games[2]),
-        20: get_game(games[3]),
+        13: post_review(games[0],players[0], reviews[0]),
+        14: post_review(games[1],players[1], reviews[1]),
+        15: post_review(games[2],players[2], reviews[2]),
+        16: get_game_reviews(games[0]),
+        17: get_game_reviews(games[1]),
+        18: get_game_reviews(games[2]),
+        19: patch_review(reviews[0], {'review': {'rating': 5.0}}),
+        20: get_game(games[0]),
+        21: get_game(games[1]),
+        22: get_game(games[2]),
+        23: get_game(games[3]),
     }
-
     return results
 
 

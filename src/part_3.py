@@ -1,4 +1,4 @@
-from requests import get, post, delete
+from requests import get, post, delete, patch
 from copy import deepcopy
 from .utils import __show, __skip_exception
 
@@ -32,7 +32,8 @@ def get_top_calification(games, quantity, *, show=False):
 
     games_copy = deepcopy(games)
 
-    sorted_games = sorted(games_copy, key=lambda game: game.calification, reverse=True)
+    sorted_games = sorted(games_copy, key=lambda game: (game.calification, game.id), reverse=True)
+
     selected = sorted_games[:quantity]
 
     if show:
@@ -46,50 +47,6 @@ def get_top_calification(games, quantity, *, show=False):
 
     return False
 
-'''@__skip_exception
-def get_player_top_cards(player, quantity, *, show=False):
-    url = f'{BASE_URL}/players/topCards/{quantity}'
-    response = get(url)
-    body = response.json()
-    players_copy = deepcopy(player)
-
-    sorted_player = sorted(players_copy, key=lambda player: player.card, reverse=False)
-
-    selected = sorted_player[:quantity]
-
-    if show:
-        __show(body, selected)
-
-    if len(selected) == len(body) == quantity:
-    
-        return all(
-            player.is_valid(body[i])
-            for i, player in enumerate(selected)
-        )
-
-    return False'''
-
-'''@__skip_exception
-def get_player_top_assists(player, quantity, *, show=False):
-    url = f'{BASE_URL}/players/topAssists/{quantity}'
-    response = get(url)
-    body = response.json()
-
-    players_copy = deepcopy(player)
-
-    sorted_player = sorted(players_copy, key=lambda player: player.assist/(player.assist+player.goal), reverse=True)
-    selected = sorted_player[:quantity]
-
-    if show:
-        __show(body, selected)
-
-    if len(selected) == len(body) == quantity:
-        return all(
-            player.is_valid(body[i])
-            for i, player in enumerate(selected)
-        )
-
-    return False'''
 
 
 @__skip_exception
@@ -97,6 +54,7 @@ def get_player_from_review(review, players, *, show=False):
     url = f'{BASE_URL}/reviews/{review.id}/player'
     response = get(url)
     body = response.json()
+
 
     if show:
         __show(body, review.player_id)
@@ -111,21 +69,22 @@ def get_player_from_review(review, players, *, show=False):
 
 
 @__skip_exception
-def delete_worst_game(games, reviews, players, *, show=False): #B
+def delete_worst_game(games, reviews, *, show=False): #B
     url = f'{BASE_URL}/games/low'
     response = delete(url)
     body = response.json()
 
 
-    lowest_game = min(games, key=lambda game: (game.calculate_points(), 1 - len(game.reviews)))
+    lowest_game = min(games, key=lambda game: (game.calification, 1 - len(game.reviews)))
 
 
     if show:
         __show(body, lowest_game)
 
     if lowest_game.is_valid(body):
-
-        reviews.remove(lowest_game.reviews)
+        if lowest_game.reviews:
+            for review in lowest_game.reviews:
+             reviews.remove(lowest_game.reviews)
 
         lowest_game.destroy()
 
@@ -138,11 +97,11 @@ def delete_worst_game(games, reviews, players, *, show=False): #B
         
 
 @__skip_exception
-def patch_update_game_calification(game, *, show=False):
-    url = f'{BASE_URL}/games/{game.id}'
+def patch_update_game_calification(game, *, show=True):
+    url = f'{BASE_URL}/games/calification_update/{game.id}'
     game.calification = game.calculate_points()
     data = game.data()
-    response = post(url, json=data)
+    response = patch(url, json=data)
     body = response.json()
 
 

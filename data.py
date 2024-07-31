@@ -99,8 +99,8 @@ PLAYERS_C = [
 
 
 WRONG_GAMES = [
-    Game(name='', calification=4.9, description='Un juego de acción y aventura en un mundo abierto.'),
-    Game(name='Red_Dead_Redemption_2', calification=0.0, description=''),
+    Game(name='', calification='', description='Un juego de acción y aventura en un mundo abierto.'),
+    Game(name='Red_Dead_Redemption_2', calification='', description=''),
     Game(name='The_Witcher_3:_Wild_Hunt', calification=4.9, description=''),
     Game(name='Minecraft', calification=4.7, description='Juego de construcción, exploración y supervivencia en un mundo de bloques.'),
     Game(name='', calification=4.8, description='Juego de plataformas en 3D protagonizado por Mario en una aventura global.')
