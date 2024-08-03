@@ -25,7 +25,12 @@ class Game:
         attr_2 = data['name'] == self.name
         attr_3 = data['calification'] == self.calification
         attr_4 = data['description'] == self.desciption
-
+        if not all([attr_1, attr_2, attr_3, attr_4]):
+            print("Un valor no es igual")
+            print("id:",attr_1)
+            print("name:",attr_2)
+            print("calification:",attr_3)
+            print("description:",attr_4)
         return all([attr_1, attr_2, attr_3, attr_4])
     
     def update(self, data):
@@ -99,6 +104,15 @@ class Review:
         attr_5 = data['player_id'] == self.player_id
         attr_6 = data['game_id'] == self.game_id 
 
+        if not all([attr_1, attr_2, attr_3, attr_4, attr_5, attr_6]):
+            print("Un valor no es igual")
+            print("id:",attr_1)
+            print("title:",attr_2)
+            print("description:",attr_3)
+            print("calification:",attr_4)
+            print("player_id:",attr_5)
+            print("game_id:",attr_6)
+
         return all([attr_1, attr_2, attr_3, attr_4, attr_5, attr_6])
 
     def update(self, data):
@@ -155,6 +169,13 @@ class Player:
         attr_4 = data['phone'] == self.phone
         attr_5 = data['favourite_game_id'] == self.favourite_game_id or is_new
 
+        if not all([attr_1, attr_2, attr_3, attr_4, attr_5]):
+            print("Un valor no es igual")
+            print("id:",attr_1)
+            print("name:",attr_2)
+            print("preference:",attr_3)
+            print("phone:",attr_4)
+            print("favourite_game_id:",attr_5)
 
         return all([attr_1, attr_2, attr_3, attr_4, attr_5])
 

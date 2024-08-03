@@ -24,7 +24,8 @@ def get_all_games(games: list[Game], *, show=False):
         )
 
         return content_match
-
+    print("Error en el get_all_games")
+    print("No coinciden los valores del body con los valores de games")
     return False
 
 
@@ -40,6 +41,9 @@ def post_games(game: Game, *, show=False):
         __show(body, game)
 
     if response.status_code >= 400:
+        print("Error en el post_games")
+        print("Status code: ", response.status_code)
+        print("esto es un error del servidor")
         return False
 
     if game.is_valid(body, is_new=True):
@@ -73,9 +77,9 @@ def delete_game(games: list[Game], game: Game, *, show=False):
 
     if body == {}:
         games.remove(game)
-
         return True
-
+    print("Error en el delete_game")
+    print("el body retornado no esta vacio")
     return False
 
 
