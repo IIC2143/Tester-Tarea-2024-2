@@ -18,16 +18,11 @@ def post_players(player,game ,*, show=False):
         __show(body, player)
 
     if response.status_code >= 400:
-        print("Error en el post_players")
-        print("Status code: ", response.status_code)
-        print("esto es un error del servidor")
         return False
     
     if player.is_valid(body, is_new=True):
         player.id = body['id']
         return True
-    print("Error en el post_players")
-    print("No son iguales los valores de player con los valores de body")
     return False
 
 @__skip_exception
@@ -51,8 +46,7 @@ def get_player(player, *, show=False):
         __show(body, player)
 
     if not player.is_valid(body):
-        print("Error en el get_player")
-        print("No son iguales los valores de player con los valores de body")
+        pass
     return player.is_valid(body)
 
 
@@ -72,7 +66,6 @@ def get_game_reviews(game, *, show=False):
         )
 
         return content_match
-    print("Error en el get_game_reviews")
     return False
 
 
@@ -88,9 +81,7 @@ def post_review(game, player, review, *, show=False):
     if show:
         __show(body, review)
 
-    if response.status_code >= 400:
-        print("Error en el post_review")
-        print("Status code: ", response.status_code)   
+    if response.status_code >= 400:  
 
         return False
     
@@ -100,8 +91,7 @@ def post_review(game, player, review, *, show=False):
         review.id = body['id']
 
         return True
-    print("Error en el post_review")
-    print("No son iguales los valores de review con los valores de body")
+
     return False
 
 
@@ -118,8 +108,6 @@ def patch_review(review, new_review_data, *, show=False):
     body = response.json()
 
     if response.status_code >= 400:
-        print("Error en el patch_review")
-        print("Status code: ", response.status_code)
         return False
 
     review_copy = deepcopy(review)
@@ -132,9 +120,6 @@ def patch_review(review, new_review_data, *, show=False):
     if review_copy.is_valid(body):
         review.update(new_review_data)  
         return True
-    
-    print("Error en el patch_review")
-    print("No son iguales los valores de review_copy con los valores de body")
 
     return False
 
@@ -162,6 +147,4 @@ def get_review_by_game(reviews, game, *, show=False):
         )
 
         return content_match
-    print("Error en el get_review_by_game")
-    print("No son iguales los valores de filtered_reviews con los valores de body")
     return False

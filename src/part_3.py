@@ -20,8 +20,7 @@ def get_teamfavourateGame_player(player,games ,*, show=False):
         for game in games:
             if game.is_valid(body):
                 return True
-    print("Error en el get_teamfavourateGame_player")
-    print("No son iguales los valores de player con los valores de body")
+
     return False
 
 
@@ -45,9 +44,6 @@ def get_top_calification(games, quantity, *, show=False):
             game.is_valid(body[i])
             for i, game in enumerate(selected)
         )
-    
-    print("Error en el get_top_calification")
-    print("No son iguales los valores de selected con los valores de body")
     return False
 
 
@@ -67,9 +63,6 @@ def get_player_from_review(review, players, *, show=False):
         for player in players:
             if player.is_valid(body):
                 return True
-
-    print("Error en el get_player_from_review")
-    print("No son iguales los valores de review con los valores de body")
 
     return False
 
@@ -99,8 +92,6 @@ def delete_worst_game(games, reviews, *, show=False): #B
 
         return True
 
-    print("Error en el delete_worst_game")
-    print("No son iguales los valores de lowest_game con los valores de body")
     return False
         
 
@@ -114,8 +105,7 @@ def patch_update_game_calification(game, *, show=False):
 
 
     if response.status_code >= 400:
-        print("Error en el patch_update_game_calification")
-        print("Status code: ", response.status_code)
+
         return False
 
     if show:
@@ -127,6 +117,5 @@ def patch_update_game_calification(game, *, show=False):
 
         return True
 
-    print("Error en el patch_update_game_calification")
-    print("No son iguales los valores de game con los valores de body")
+
     return False
