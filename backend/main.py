@@ -28,6 +28,7 @@ def main():
 
     #if not os.path.exists(student_user):
     #    os.mkdir(student_user)
+    all_results = {}
 
     for test in tests:
         results = test()
@@ -35,11 +36,16 @@ def main():
         #with open(path, 'w') as f:
         #    json.dump(results, f, indent=4)
 
+
+        all_results[test.__name__] = results
+
         score = sum(results.values())
         total = len(results)
 
         print(f'{test.__name__}: {score}/{total}')
 
+    with open('results.json', 'w') as f:
+        json.dump(all_results, f, indent=4)
 
 if __name__ == '__main__':
     main()

@@ -24,8 +24,7 @@ def get_all_games(games: list[Game], *, show=False):
         )
 
         return content_match
-    print("Error en el get_all_games")
-    print("No coinciden los valores del body con los valores de games")
+   
     return False
 
 
