@@ -18,7 +18,7 @@ Este retornara los test que se logran pasar y seran guardados en un json. Tenien
 
 y luego para revisar el tester en su navegador colocar 
 
-> http://localhost:8000/frontend/
+> http://localhost:8000/frontend/test
 
 Esto deberia mostrarles una pagina donde pueden desglosar el resultado del tester y apretando cada test decirle a que se debe el error y algun hint para arreglarlo.
 

@@ -55,8 +55,8 @@ def test_2C():
         24: (False, "validacion incorrecta") if isinstance(get_game_reviews(bad_games[0]), tuple) and get_game_reviews(bad_games[0])[0] else (True, "validacion correcta"),
         25: (False, "validacion incorrecta") if isinstance(get_review_by_game(bad_reviews, ''), tuple) and get_review_by_game(bad_reviews, '')[0] else (True, "validacion correcta"),
         26: (False, "validacion incorrecta") if isinstance(delete_game(bad_games, bad_games[0]), tuple) and delete_game(bad_games, bad_games[0])[0] else (True, "validacion correcta"),
-        27: (False, "validacion incorrecta") if isinstance(patch_review(bad_reviews[0], {'review': {'player_id': bad_games[1]}}, tuple)) and patch_review(bad_reviews[0], {'review': {'player_id': bad_games[1]}}, games[0])[0] else (True, "validacion correcta"),
-        28: (False, "validacion incorrecta") if isinstance(patch_review(bad_reviews[0], {'review': {'game_id': bad_games[1]}}, tuple)) and patch_review(bad_reviews[0], {'review': {'game_id': bad_games[1]}}, games[0])[0] else (True, "validacion correcta"),
+        27: (False, "validacion incorrecta") if isinstance(patch_review(bad_reviews[0], {'review': {'player_id': bad_games[1]}}),tuple) and patch_review(bad_reviews[0], {'review': {'player_id': bad_games[1]}}, games[0])[0] else (True, "validacion correcta"),
+        28: (False, "validacion incorrecta") if isinstance(patch_review(bad_reviews[0], {'review': {'game_id': bad_games[1]}}),tuple) and patch_review(bad_reviews[0], {'review': {'game_id': bad_games[1]}}, games[0])[0] else (True, "validacion correcta"),
         29: delete_game(games, games[1]),
         30: (False, "validacion incorrecta") if isinstance(get_all_games(games), tuple) and get_all_games(games)[0] else (True, "validacion correcta"),
     }
