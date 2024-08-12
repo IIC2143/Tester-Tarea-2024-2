@@ -20,7 +20,7 @@ from src.part_2 import (
 
 
 from src.part_3 import (
-    get_teamfavourateGame_player,
+    get_teamfavouriteGame_player,
     get_top_calification,
     get_player_from_review,
     delete_worst_game,
@@ -50,8 +50,8 @@ def test_3A():
         11: post_review(games[0], players[0], reviews[3]),
         12: post_review(games[0], players[0], reviews[4]),
         13: post_review(games[0], players[1], reviews[5]),
-        14: get_teamfavourateGame_player(players[0],games),
-        15: get_teamfavourateGame_player(players[1],games),
+        14: get_teamfavouriteGame_player(players[0],games),
+        15: get_teamfavouriteGame_player(players[1],games),
         16: get_top_calification(games,3),
         17: get_player_from_review(reviews[1], players),
         18: delete_worst_game(games, reviews),

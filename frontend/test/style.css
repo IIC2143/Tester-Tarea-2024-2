@@ -6,6 +6,20 @@ body {
     padding: 0;
 }
 
+.success {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
+
+.reason {
+    font-style: italic;
+    color: gray;
+}
+
+
 .container {
     max-width: 600px;
     margin: 20px auto;

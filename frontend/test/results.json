@@ -1,0 +1,493 @@
+{
+    "test_1A": {
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "5": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "6": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "7": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "8": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            false,
+            "La respuesta no contiene un JSON"
+        ]
+    },
+    "test_1B": {
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "validaci\u00f3n correcta"
+        ],
+        "5": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "6": [
+            true,
+            "validaci\u00f3n correcta"
+        ],
+        "7": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "8": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            false,
+            "La respuesta no contiene un JSON"
+        ]
+    },
+    "test_1C": {
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "11": true,
+        "12": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "13": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "14": false,
+        "15": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "16": false,
+        "17": false,
+        "18": false,
+        "19": true,
+        "20": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ]
+    },
+    "test_2A": {
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "5": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "6": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "7": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "8": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "11": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "12": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "13": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "14": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "15": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "16": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "17": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "18": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "19": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "20": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "21": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "22": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "23": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ]
+    },
+    "test_2B": {
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "5": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "6": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "7": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "8": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "11": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "12": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "13": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "14": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "15": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "16": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "17": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "18": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "19": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "20": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "21": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ]
+    },
+    "test_2C": {
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "5": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "6": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "7": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "8": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "11": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "12": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "13": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "14": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "15": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "16": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "17": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "18": false,
+        "19": false,
+        "20": true,
+        "21": false,
+        "22": true,
+        "23": false,
+        "24": false,
+        "25": true,
+        "26": false,
+        "27": true,
+        "28": true,
+        "29": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "30": false
+    },
+    "test_3A": {
+        "0": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "1": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "2": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "3": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "4": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "5": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "6": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "7": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "8": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "9": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "10": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "11": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "12": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "13": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "14": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "15": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "16": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "17": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "18": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ],
+        "19": [
+            false,
+            "La respuesta no contiene un JSON"
+        ],
+        "20": [
+            true,
+            "Operaci\u00f3n exitosa"
+        ]
+    }
+}

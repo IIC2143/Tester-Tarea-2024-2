@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('../../results.json')
+    fetch('results.json')
         .then(response => response.json())
         .then(results => {
             const resultsContainer = document.getElementById('results');
@@ -18,25 +18,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 const testSummary = document.createElement('div');
                 testSummary.classList.add('test-summary');
                 testSummary.style.display = 'none'; // Oculto por defecto
-                let count = 0;
+
                 for (let [step, result] of Object.entries(testResults)) {
-                    count += 1;
                     const resultItem = document.createElement('div');
                     resultItem.classList.add('result-item');
-                    resultItem.innerHTML = `<span>Step ${step}:</span> <span>${result ? 'Success' : 'Fail'}</span>`;
-                    testSummary.appendChild(resultItem);
 
-                    if (result) correctCount += 1;
-                    if (count === testTotal) {
-                        resultItem.innerHTML = `<strong> ${"Result of test"}: ${correctCount}/${testTotal}</strong>`;
-                        testSummary.appendChild(resultItem);
+                    // Desempaquetar el resultado
+                    const [success, reason] = Array.isArray(result) ? result : [result, "Sin razón específica, probablemente problemas con la conexion del servidor"];
+                    
+                    if (success) {
+                        resultItem.innerHTML = `<span>Step ${step}:</span> <span class="success">Success</span>`;
+                        correctCount += 1;
+                    } else {
+                        resultItem.innerHTML = `<span>Step ${step}:</span> <span class="fail">Fail</span> <span class="reason" style="display:none;">(${reason})</span>`;
+                        
+                        // Agregar evento de clic para mostrar/ocultar la razón
+                        resultItem.addEventListener('click', (event) => {
+                            event.stopPropagation(); // Detener la propagación del evento de clic
+                            const reasonElement = resultItem.querySelector('.reason');
+                            reasonElement.style.display = reasonElement.style.display === 'none' ? 'inline' : 'none';
+                        });
                     }
+                    
+                    testSummary.appendChild(resultItem);
                 }
 
+                const summaryItem = document.createElement('div');
+                summaryItem.innerHTML = `<strong>Result of test: ${correctCount}/${testTotal}</strong>`;
+                testSummary.appendChild(summaryItem);
 
                 testItem.appendChild(testSummary);
 
-                // Agregar un evento de clic para mostrar/ocultar el resumen
+                // Agregar un evento de clic para mostrar/ocultar el resumen del test
                 testItem.addEventListener('click', () => {
                     testSummary.style.display = testSummary.style.display === 'none' ? 'block' : 'none';
                 });
