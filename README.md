@@ -10,9 +10,9 @@ Para correrlo los pasos son los siguientes:
 
 * Luego se debe correr el main del backend en el tester .
 
->python main.py
+>python backend/main.py
 
-Este retornara los test que se logran pasar y seran guardados en un json. Teniendo el json, la idea es que creen un servidor de python que entregue ese json. Esto lo puedne hacer con 
+Este retornara los test que se logran pasar y seran guardados en un json. Teniendo el json, deben crear un servidor de python que entregue ese json. Esto lo pueden hacer con 
 
 >python -m http.server 8000
 
