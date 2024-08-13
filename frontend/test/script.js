@@ -17,14 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const testSummary = document.createElement('div');
                 testSummary.classList.add('test-summary');
-                testSummary.style.display = 'none'; // Oculto por defecto
+                testSummary.style.display = 'none'; 
 
                 for (let [step, result] of Object.entries(testResults)) {
                     const resultItem = document.createElement('div');
                     resultItem.classList.add('result-item');
 
-                    // Desempaquetar el resultado
-                    const [success, reason] = Array.isArray(result) ? result : [result, "Sin razón específica, probablemente problemas con la conexion del servidor"];
+                    const [success, reason] = Array.isArray(result) ? result : [result, "Sin razón específica, probablemente problemas con la conexión del servidor"];
                     
                     if (success) {
                         resultItem.innerHTML = `<span>Step ${step}:</span> <span class="success">Success</span>`;
@@ -32,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         resultItem.innerHTML = `<span>Step ${step}:</span> <span class="fail">Fail</span> <span class="reason" style="display:none;">(${reason})</span>`;
                         
-                        // Agregar evento de clic para mostrar/ocultar la razón
+
                         resultItem.addEventListener('click', (event) => {
-                            event.stopPropagation(); // Detener la propagación del evento de clic
+                            event.stopPropagation(); 
                             const reasonElement = resultItem.querySelector('.reason');
                             reasonElement.style.display = reasonElement.style.display === 'none' ? 'inline' : 'none';
                         });
@@ -45,25 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const summaryItem = document.createElement('div');
                 summaryItem.innerHTML = `<strong>Result of test: ${correctCount}/${testTotal}</strong>`;
-                testSummary.appendChild(summaryItem);
+                testItem.appendChild(summaryItem); 
 
                 testItem.appendChild(testSummary);
 
-                // Agregar un evento de clic para mostrar/ocultar el resumen del test
                 testItem.addEventListener('click', () => {
                     testSummary.style.display = testSummary.style.display === 'none' ? 'block' : 'none';
                 });
 
-                // Agregar el test al contenedor de resultados
                 resultsContainer.appendChild(testItem);
+                
 
-                // Contabilizar el total general
                 overallTotal += testTotal;
                 overallCorrect += correctCount;
             }
 
-            // Mostrar el total general
+
             totalContainer.textContent = `Total: ${overallCorrect}/${overallTotal}`;
+
+
+            const batterySummary = document.createElement('div');
+            resultsContainer.appendChild(batterySummary);
         })
         .catch(error => console.error('Error loading results:', error));
 });
