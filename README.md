@@ -14,6 +14,7 @@ Para correrlo los pasos son los siguientes:
 
 Este retornara los test que se logran pasar y seran guardados en un json. Teniendo el json, deben crear un servidor de python que entregue ese json. Esto lo pueden hacer con 
 
+>cd ..
 >python -m http.server 8000
 
 y luego para revisar el tester en su navegador colocar 
