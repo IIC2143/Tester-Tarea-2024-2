@@ -23,3 +23,6 @@ y luego para revisar el tester en su navegador colocar
 Esto deberia mostrarles una pagina donde pueden desglosar el resultado del tester y apretando cada test decirle a que se debe el error y algun hint para arreglarlo.
 
 Recordar que no revisaremos con exactamente los mismos test pero si logran pasar todos los publicos no deberian tener problemas con los privados.
+
+# TIPS
+En caso de que querer volver a probar todo denuevo debes apretar ctr + c para terminar con el proceso del servidor
