@@ -16,6 +16,14 @@ from test_3A import test_3A
 
 
 def main():
+
+    current_dir = Path(__file__).resolve().parent
+    target_dir = current_dir.parent / 'frontend' / 'test'
+    target_dir.mkdir(parents=True, exist_ok=True)
+    file_path = target_dir / 'results.json'
+
+
+
     #tests = [test_1A,]
 
     tests = [
@@ -28,6 +36,7 @@ def main():
 
     #if not os.path.exists(student_user):
     #    os.mkdir(student_user)
+    all_results = {}
 
     for test in tests:
         results = test()
@@ -35,11 +44,16 @@ def main():
         #with open(path, 'w') as f:
         #    json.dump(results, f, indent=4)
 
-        score = sum(results.values())
-        total = len(results)
 
-        print(f'{test.__name__}: {score}/{total}')
+        all_results[test.__name__] = results
 
+        #score = sum(results.values())
+        #total = len(results)
+
+        #print(f'{test.__name__}: {score}/{total}')
+
+    with open(file_path, 'w') as f:
+        json.dump(all_results, f, indent=4)
 
 if __name__ == '__main__':
     main()
