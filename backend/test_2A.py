@@ -46,7 +46,7 @@ def test_2A():
         16: get_game_reviews(games[0]),
         17: get_game_reviews(games[1]),
         18: get_game_reviews(games[2]),
-        19: patch_review(reviews[0], {'review': {'rating': 5.0}}),
+        19: patch_review(reviews[0], {'review': {'calification': 5.0}}),
         20: get_game(games[0]),
         21: get_game(games[1]),
         22: get_game(games[2]),
